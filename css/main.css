@@ -1,0 +1,812 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+
+
+.header.on {
+    background: #fff;
+
+}
+
+.header_top_wrap {
+    background: #e50012;
+    font-size: 16px;
+    line-height: 40px;
+    color: #000000;
+    text-align: center;
+
+}
+
+.header.on .header_wrap a {
+    color: #000000
+}
+
+.header_top_wrap strong {
+    font-weight: 700;
+}
+
+.header_top_wrap span {
+    text-decoration: underline;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.header .header_wrap h1 {
+    width: 150px;
+}
+
+/* 
+헤더 - 메인 메뉴
+ */
+
+.gnb .main_menu {
+    display: flex;
+    gap: 70px;
+    margin: 0 0 0 270px;
+}
+
+.gnb .main_menu a {
+    display: block;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 18px;
+}
+
+.gnb .main_menu>li {
+    position: relative;
+    font-size: 18px;
+    padding: 20px;
+}
+
+
+.gnb .main_menu .sub_menu {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #ffffff;
+    width: 120px;
+
+    padding: 15px 0;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.2s;
+}
+
+.gnb .main_menu>li:hover .sub_menu {
+    top: 55px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.gnb .main_menu>li .sub_menu>li:hover a {
+    background-color: #e50012;
+    color: #fff;
+}
+
+
+
+
+.gnb .sub_menu li~li {
+    border-top: 1px solid #ddd;
+}
+
+.header .gnb .sub_menu a {
+    text-align: center;
+    display: block;
+    color: #333;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+
+
+
+
+/* 
+헤더 -고객센터
+ */
+
+.header .ask {
+    margin: 0 0 0 200px;
+}
+
+.header .ask a {
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+
+
+}
+
+.header .ask i {
+    vertical-align: middle;
+    font-size: 25px;
+    margin: 0 5px 0 0;
+}
+
+.header .ask span {
+    outline: 1px solid #ddd;
+    padding: 7px 30px;
+    border-radius: 20px;
+}
+
+.header .ask span:hover {
+    color: #fff;
+    background: #e50012;
+    outline: none;
+    transition: 0.5s;
+}
+
+
+
+
+/* 
+
+메인 비주얼 섹션
+
+*/
+
+
+.main_visual {
+    position: relative;
+}
+
+
+/* 메인에 커버 씌우기 */
+.main_visual .itm::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.main_visual .main_slide .itm01 {
+    height: 100vh;
+    background: url(../img/sbg01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slide .itm02 {
+    height: 100vh;
+    background: url(../img/sbg02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slide .itm03 {
+    height: 100vh;
+    background: url(../img/sbg03.jpg) no-repeat center center/cover;
+}
+
+/* 슬라이드 타이포 위치 */
+.main_visual .main_slide .slogan {
+    position: absolute;
+    top: 545px;
+    left: 227px;
+    transform: translate(0, -50%);
+
+    width: 500px;
+    word-break: keep-all;
+
+
+    z-index: 999;
+}
+
+/* 슬라이드 타이포 형태 */
+.main_visual .main_slide .slogan strong {
+    margin: 0 auto;
+    font-size: 65px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* 커버 땜시 제트인덱스를 써야 앞으로 나와 작동되더라 */
+.main_visual .slick-dots {
+    position: absolute;
+    top: 665px;
+    left: 252px;
+    transform: translate(0, -50%);
+
+}
+
+.main_visual .slick-dots button {}
+
+.main_visual .slick-dots>li {
+    display: inline-block;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.main_visual .slick-dots>li button {
+    position: relative;
+    width: 40px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 2px;
+
+    outline: none;
+    border: none;
+    font-size: 0;
+
+    cursor: pointer;
+}
+
+.main_visual .slick-dots>li button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e50012
+}
+
+.main_visual .slick-dots>li.slick-active button::after {
+    width: 100%;
+    transition: 3s;
+
+}
+
+
+.main_visual .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 1800px;
+    width: 100%;
+}
+
+.main_visual .arrows i {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main_visual .arrows .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.main_visual .arrows .left:hover {
+    color: #e50012;
+}
+
+
+.main_visual .arrows .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main_visual .arrows .right:hover {
+    color: #e50012;
+}
+
+
+.main_visual .scroll {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.main_visual .scroll span {
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+
+}
+
+.main_visual .scroll span::before {
+
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, 0);
+}
+
+.main_visual .scroll span::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+
+    animation: circle 1.5s infinite cubic-bezier(1, .18, .49, 1.03);
+
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, 0);
+        outline: 0 solid rgba(255, 255, 255, 1);
+
+    }
+
+    90% {
+        outline: 0 solid rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        transform: translate(-50%, 90px);
+        outline: 20px solid rgba(255, 255, 255, 0);
+    }
+}
+
+/*
+
+ 메인 상품 슬라이드 섹션
+
+ */
+
+.main_product {
+    height: 100vh;
+}
+
+.main_product .title h3 {
+    color: #e50012;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 0 0 30px 0;
+}
+
+.main_product .title figure {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.main_product .pbtn {
+    display: inline-block;
+    outline: 1px solid #222;
+    border-radius: 50px;
+    padding: 15px 71px;
+    font-size: 15px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.main_product .pbtn:hover {
+    outline: none;
+    background: #e50012;
+    color: #ffffff;
+}
+
+
+/* 
+
+메인 탭 섹션
+
+*/
+.main_tab {
+    /* background: linear-gradient(360deg, transparent 30%, #EAE53A 70%); */
+    /* background: url(../img/bbg01.jpg) no-repeat center center; */
+    background: #f9f9f9;
+}
+
+
+.main_tab figure {
+    opacity: 0;
+    transform: translate(1000px, 0);
+    transition: 1s;
+}
+
+.main_tab.on figure {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.main_tab .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+
+    opacity: 0;
+    transform: translate(-500px, 0);
+    transition: 1s;
+}
+
+.main_tab.on .content {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+.main_tab .content figure img {
+    width: 600px;
+    height: 100%;
+}
+
+
+.main_tab .tab_menu {
+    cursor: pointer;
+}
+
+.main_tab .tab_link>* {
+    position: relative;
+    top: 200px;
+    left: 290px;
+    transform: translate(-50%, -50%);
+    height: 60px;
+    width: 230px;
+    z-index: 999;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.main_tab .tab_link>*::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    outline: 1px solid #ddd;
+    box-shadow: 2px 2px 28px 3px rgb(0 0 0 / 9%);
+    overflow: hidden;
+}
+
+.main_tab .tab_link li {
+    margin: 0 0 10px 0;
+}
+
+
+.main_tab .tab_link>*.on {
+    background: #e50012;
+    border-radius: 10px;
+
+}
+
+.main_tab .tab_link>*.on a {
+    color: #fff;
+
+}
+
+.main_tab .tab_link a {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: #222;
+    line-height: 60px;
+}
+
+/* 탭 콘텐츠 */
+
+
+.main_tab .tab_content {}
+
+.main_tab .tab_content .con {
+    position: relative;
+    text-align: center;
+    /* border: 1px solid #ddd; */
+    border-radius: 50%;
+    box-shadow: 2px 2px 28px 3px rgb(0 0 0 / 9%);
+    background: #fff;
+}
+
+.main_tab .tab_content .con {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+
+.main_tab .tab_content .con.on {
+    visibility: visible;
+    height: 100%
+}
+
+
+.main_tab .tab_content .con img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.main_tab .tab_content .con .des {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/*
+
+ 메인 소식 섹션
+
+ */
+.main_event {
+    /* background: linear-gradient(360deg, transparent 50%, #EAE53A 50%);
+ */
+
+
+}
+
+.main_event .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 1s;
+}
+
+.main_event.on .content {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.main_event .content .card {
+    box-shadow: 2px 2px 28px 3px rgb(0 0 0 / 9%);
+    border-color: #eee;
+    border-style: solid;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.main_event .content .card .img_box {
+    margin: 0 0 30px 0;
+}
+
+.main_event .content .card .img_box img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.main_event .content .card figcaption strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 10px 30px 30px 30px;
+}
+
+.main_event .content .card figcaption span {
+    display: block;
+    font-size: 17px;
+    line-height: 1.3;
+    margin: 10px 30px 30px 30px;
+}
+
+
+/*
+
+ 메인 보도자료 섹션
+
+ */
+.main_news {
+    background: #f9f9f9;
+}
+
+.main_news .content {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 1s;
+}
+
+.main_news.on .content {
+    opacity: 1;
+    transform: translate(0, 0);
+
+}
+
+.main_news .list {
+    display: grid;
+    grid-template-columns: 18fr 1fr;
+    align-items: center;
+    height: 30px;
+    margin: 0 0 10px 0;
+
+}
+
+.main_news .list::after {
+    content: "";
+    height: 1px;
+    background: #ddd;
+
+}
+
+.main_news .list:hover::after {
+    height: 3px;
+    transition: 0.1s;
+}
+
+
+.main_news .list h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.main_news .list .date {
+    font-size: 14px;
+}
+
+
+/* 
+
+푸터 
+
+*/
+
+
+.footer {
+    background: #fff;
+    color: #555;
+    font-size: 13px;
+
+}
+
+.footer .ft {
+    border-bottom: 1px solid #ddd;
+}
+
+.footer .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.footer .fb .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.footer .content ul {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.footer .content li {}
+
+
+
+.footer .content .customer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+.footer .content .customer li {
+    margin: 0 15px 0 0;
+    line-height: 1.3;
+}
+
+.footer .content .customer>* {
+    position: relative;
+}
+
+.footer .content .customer li~li::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 50%;
+    width: 2px;
+    height: 2px;
+    background: #999;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.footer .link>* {
+    position: relative;
+}
+
+.footer .content .link li~li::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 50%;
+    width: 2px;
+    height: 2px;
+    background: #999;
+    transform: translate(-50%, -50%);
+}
+
+.footer .sns i {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.footer .link {
+    gap: 15px;
+}
+
+.family_link {
+    outline: none;
+    border: none;
+
+}
+
+.family_link #fl {
+    outline: none;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 5px 20px;
+    background: #222;
+    color: #fff;
+}
+
+
+
+/* 탑스크롤 */
+.to_top {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: 999;
+
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+/* // on 으로 탑 스크롤 없앴다가 나타나게 만들기 - 기본 방식과 애니메이션 방식*/
+.to_top.on {
+
+    /* display: block; */
+    bottom: 0px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.to_top i {
+    color: #fff;
+    background: #e50012;
+    padding: 10px;
+    margin: 20px 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
